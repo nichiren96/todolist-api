@@ -3,7 +3,8 @@ const mongoose = require('mongoose')
 const todoSChema = new mongoose.Schema({
     label: {
         type: String,
-        required: [true, 'A todo must have a label']
+        required: [true, 'A todo must have a label'],
+        unique: true
     },
     done: {
         type: Boolean,
